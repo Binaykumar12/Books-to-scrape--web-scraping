@@ -25,5 +25,5 @@ soup = BeautifulSoup(response.text, 'lxml')
 books = soup.find_all('article', class_='product_pod')
 for book in books:
     book_title = book.h3.a['title']
-    book_price = book.find('p', class_='price_color').text
+    book_price = book.find('p', class_='price_color').tex
     print(f"Title: {book_title}, Price: {book_price}")
