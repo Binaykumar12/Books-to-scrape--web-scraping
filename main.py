@@ -16,7 +16,7 @@ url = "https://books.toscrape.com/catalogue/page-2.html"
 response = requests.get(url, headers=headers)
 
 # Parse the HTML content using BeautifulSoup
-soup = BeautifulSoup(response.content, 'lxml')
+soup = BeautifulSoup(response.text, 'lxml')
 
 # Extract the title of the page
 page_title = soup.title.string
